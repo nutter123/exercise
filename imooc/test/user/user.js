@@ -3,7 +3,7 @@ var bcrypt = require('bcrypt-nodejs')
 
 function getRandomString(len){
   if(!len) len=16
-  return crypto.randomBytes(Math.ceil(len/2).toString('hex'))
+  return crypto.randomBytes(Math.ceil(len / 2)).toString('hex')
 }
 
 var should = require('should')
@@ -40,7 +40,6 @@ describe('<Unit Test',function(){
           should.not.exist(err)
           _user.remove(function(err){
             should.not.exist(err)
-            done()
           })
         })
       })
@@ -63,7 +62,7 @@ describe('<Unit Test',function(){
         })
       })
 
-      it('should  default role 0',function(done){
+      it('should have default role 0',function(done){
         var _user = new User(user)
         _user.save(function(err){
           _user.role.should.equal(0)
