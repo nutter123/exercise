@@ -11,7 +11,7 @@ var app = express()
 var bodyParser = require('body-parser')
 var dbUrl='mongodb://localhost/imooc'
 var logger = require('morgan')
-var fs = require('fs')
+var fs = require('fs') 
 
 mongoose.connect('mongodb://localhost/imooc')
 //models loading
@@ -48,7 +48,7 @@ app.use(session({
   }),
   resave: false,
   saveUninitialized: true
-})) 
+}))
 
 if('development'==app.get('env')){
   app.set('showStackError',true)
