@@ -48,7 +48,7 @@ app.use(session({
   }),
   resave: false,
   saveUninitialized: true
-}))
+})) 
 
 if('development'==app.get('env')){
   app.set('showStackError',true)
