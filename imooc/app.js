@@ -13,6 +13,7 @@ var dbUrl='mongodb://localhost/imooc'
 var logger = require('morgan')
 var fs = require('fs') 
 
+
 mongoose.connect('mongodb://localhost/imooc')
 //models loading
 var models_path = __dirname+'/app/models'
